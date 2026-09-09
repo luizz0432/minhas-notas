@@ -1,0 +1,1391 @@
+/* ==========================================
+   CONFIGURAÇÕES GERAIS
+========================================== */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+
+    background:
+        radial-gradient(
+            circle at top left,
+            #1e1b4b 0%,
+            transparent 35%
+        ),
+        radial-gradient(
+            circle at bottom right,
+            #172554 0%,
+            transparent 35%
+        ),
+        #080b14;
+
+    color: #f8fafc;
+
+    min-height: 100vh;
+
+    padding: 30px 15px;
+}
+
+
+/* ==========================================
+   CONTAINER PRINCIPAL
+========================================== */
+
+.container {
+    width: 100%;
+    max-width: 850px;
+
+    margin: auto;
+}
+
+
+/* ==========================================
+   CABEÇALHO
+========================================== */
+
+header {
+    text-align: center;
+
+    margin-bottom: 30px;
+}
+
+header h1 {
+    font-size: 32px;
+
+    font-weight: 800;
+
+    letter-spacing: -1px;
+
+    background:
+        linear-gradient(
+            90deg,
+            #818cf8,
+            #c084fc
+        );
+
+    -webkit-background-clip: text;
+
+    -webkit-text-fill-color: transparent;
+
+    margin-bottom: 8px;
+}
+
+header p {
+    color: #94a3b8;
+
+    font-size: 14px;
+}
+
+
+/* ==========================================
+   CARDS
+========================================== */
+
+.card {
+    background:
+        rgba(15, 23, 42, 0.82);
+
+    border: 1px solid
+        rgba(148, 163, 184, 0.12);
+
+    border-radius: 18px;
+
+    padding: 22px;
+
+    margin-bottom: 20px;
+
+    box-shadow:
+        0 15px 40px
+        rgba(0, 0, 0, 0.25);
+
+    backdrop-filter: blur(10px);
+}
+
+
+/* ==========================================
+   TÍTULOS
+========================================== */
+
+h2 {
+    font-size: 18px;
+
+    margin-bottom: 18px;
+
+    color: #e2e8f0;
+}
+
+h3 {
+    color: #f8fafc;
+}
+
+
+/* ==========================================
+   CAMPOS
+========================================== */
+
+label {
+    display: block;
+
+    color: #cbd5e1;
+
+    font-size: 13px;
+
+    font-weight: 600;
+
+    margin-bottom: 7px;
+}
+
+input {
+    width: 100%;
+
+    background: #0f172a;
+
+    color: #f8fafc;
+
+    border: 1px solid
+        #334155;
+
+    border-radius: 10px;
+
+    padding: 12px 13px;
+
+    outline: none;
+
+    font-size: 14px;
+
+    transition: 0.2s;
+}
+
+input:focus {
+    border-color: #818cf8;
+
+    box-shadow:
+        0 0 0 3px
+        rgba(129, 140, 248, 0.12);
+}
+
+input::placeholder {
+    color: #64748b;
+}
+
+
+/* ==========================================
+   GRID DAS NOTAS
+========================================== */
+
+.notas {
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 10px;
+
+    margin-top: 15px;
+}
+
+
+/* ==========================================
+   BOTÕES
+========================================== */
+
+button {
+    border: none;
+
+    border-radius: 10px;
+
+    padding: 12px 16px;
+
+    cursor: pointer;
+
+    color: white;
+
+    font-weight: 700;
+
+    font-size: 13px;
+
+    transition:
+        transform 0.15s,
+        box-shadow 0.15s,
+        opacity 0.15s;
+}
+
+button:hover {
+    transform: translateY(-1px);
+}
+
+button:active {
+    transform: translateY(0);
+}
+
+
+/* Botão adicionar */
+
+#adicionar {
+    width: 100%;
+
+    margin-top: 18px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #6366f1,
+            #8b5cf6
+        );
+
+    box-shadow:
+        0 8px 20px
+        rgba(99, 102, 241, 0.25);
+}
+
+#adicionar:hover {
+    box-shadow:
+        0 10px 28px
+        rgba(99, 102, 241, 0.4);
+}
+
+
+/* Botão calcular */
+
+#calcular {
+    width: 100%;
+
+    background:
+        linear-gradient(
+            135deg,
+            #22c55e,
+            #16a34a
+        );
+
+    box-shadow:
+        0 8px 20px
+        rgba(34, 197, 94, 0.2);
+
+    margin-top: 5px;
+}
+
+
+/* Botão limpar */
+
+#limpar {
+    width: 100%;
+
+    margin-top: 10px;
+
+    background: #1e293b;
+
+    color: #94a3b8;
+
+    border: 1px solid
+        #334155;
+}
+
+#limpar:hover {
+    background: #273449;
+
+    color: #f8fafc;
+}
+
+
+/* ==========================================
+   LISTA DE MATÉRIAS
+========================================== */
+
+#lista-materias {
+    margin-top: 15px;
+
+    color: #64748b;
+
+    font-size: 13px;
+}
+
+
+/* ==========================================
+   ITEM DA MATÉRIA
+========================================== */
+
+.materia-lista {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    gap: 15px;
+
+    background:
+        rgba(30, 41, 59, 0.8);
+
+    border: 1px solid
+        rgba(148, 163, 184, 0.08);
+
+    padding: 14px;
+
+    margin-bottom: 8px;
+
+    border-radius: 12px;
+
+    transition: 0.2s;
+}
+
+.materia-lista:hover {
+    border-color:
+        rgba(129, 140, 248, 0.35);
+
+    background: #1e293b;
+}
+
+.materia-lista-info {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 6px;
+
+    min-width: 0;
+}
+
+.materia-lista-info strong {
+    color: #f8fafc;
+
+    font-size: 14px;
+}
+
+.materia-lista-info span {
+    color: #94a3b8;
+
+    font-size: 12px;
+}
+
+
+/* ==========================================
+   BOTÕES DA MATÉRIA
+========================================== */
+
+.materia-lista-botoes {
+    display: flex;
+
+    gap: 7px;
+
+    flex-shrink: 0;
+}
+
+.materia-lista-botoes button {
+    padding: 8px 10px;
+
+    font-size: 11px;
+}
+
+.btn-editar {
+    background: #334155;
+
+    color: #cbd5e1;
+}
+
+.btn-editar:hover {
+    background: #475569;
+
+    color: white;
+}
+
+.btn-excluir {
+    background:
+        rgba(239, 68, 68, 0.1);
+
+    color: #f87171;
+}
+
+.btn-excluir:hover {
+    background:
+        rgba(239, 68, 68, 0.2);
+}
+
+
+/* ==========================================
+   RESULTADO
+========================================== */
+
+#resultado {
+    margin-top: 20px;
+}
+
+#resultado h2 {
+    margin-bottom: 8px;
+}
+
+#resultado > p {
+    color: #94a3b8;
+
+    font-size: 14px;
+
+    margin-bottom: 15px;
+}
+
+
+/* ==========================================
+   CARD DO RESULTADO
+========================================== */
+
+.materia-resultado {
+    background:
+        rgba(15, 23, 42, 0.9);
+
+    border: 1px solid
+        rgba(148, 163, 184, 0.12);
+
+    border-radius: 16px;
+
+    padding: 18px;
+
+    margin-top: 14px;
+
+    box-shadow:
+        0 10px 30px
+        rgba(0, 0, 0, 0.2);
+
+    animation:
+        aparecer 0.35s ease;
+}
+
+
+/* ==========================================
+   ANIMAÇÃO
+========================================== */
+
+@keyframes aparecer {
+
+    from {
+        opacity: 0;
+
+        transform:
+            translateY(8px);
+    }
+
+    to {
+        opacity: 1;
+
+        transform:
+            translateY(0);
+    }
+
+}
+
+
+/* ==========================================
+   CABEÇALHO DA MATÉRIA
+========================================== */
+
+.materia-cabecalho {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    gap: 10px;
+
+    margin-bottom: 15px;
+}
+
+.materia-cabecalho h3 {
+    font-size: 16px;
+}
+
+
+/* ==========================================
+   STATUS
+========================================== */
+
+.status {
+    font-size: 10px;
+
+    font-weight: 800;
+
+    padding: 6px 9px;
+
+    border-radius: 999px;
+
+    letter-spacing: 0.4px;
+}
+
+.status.aprovado {
+    background:
+        rgba(34, 197, 94, 0.12);
+
+    color: #4ade80;
+
+    border: 1px solid
+        rgba(34, 197, 94, 0.2);
+}
+
+.status.pendente {
+    background:
+        rgba(245, 158, 11, 0.12);
+
+    color: #fbbf24;
+
+    border: 1px solid
+        rgba(245, 158, 11, 0.2);
+}
+
+
+/* ==========================================
+   NOTAS DOS BIMESTRES
+========================================== */
+
+.notas-resultado {
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 8px;
+
+    margin-bottom: 15px;
+}
+
+.nota-card {
+    background: #0b1120;
+
+    border: 1px solid
+        #1e293b;
+
+    border-radius: 10px;
+
+    padding: 10px;
+
+    text-align: center;
+}
+
+.nota-card span {
+    display: block;
+
+    color: #64748b;
+
+    font-size: 8px;
+
+    font-weight: 700;
+
+    margin-bottom: 5px;
+}
+
+.nota-card strong {
+    color: #f8fafc;
+
+    font-size: 17px;
+}
+
+.nota-card .nota-vazia {
+    color: #475569;
+}
+
+
+/* ==========================================
+   MÉDIA
+========================================== */
+
+.media-card {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    background:
+        rgba(99, 102, 241, 0.08);
+
+    border: 1px solid
+        rgba(99, 102, 241, 0.12);
+
+    border-radius: 10px;
+
+    padding: 12px;
+
+    margin-bottom: 15px;
+}
+
+.media-card span {
+    color: #94a3b8;
+
+    font-size: 11px;
+
+    font-weight: 700;
+}
+
+.media-card strong {
+    color: #a5b4fc;
+
+    font-size: 20px;
+}
+
+
+/* ==========================================
+   PONTOS
+========================================== */
+
+.pontos-titulo {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    margin-bottom: 8px;
+}
+
+.pontos-titulo span {
+    color: #94a3b8;
+
+    font-size: 11px;
+
+    font-weight: 700;
+}
+
+.pontos-titulo strong {
+    color: #f8fafc;
+
+    font-size: 14px;
+}
+
+
+/* ==========================================
+   BARRA DE PROGRESSO
+========================================== */
+
+.progresso-container {
+    width: 100%;
+
+    height: 9px;
+
+    background: #1e293b;
+
+    border-radius: 999px;
+
+    overflow: hidden;
+
+    margin-bottom: 6px;
+}
+
+.progresso-barra {
+    height: 100%;
+
+    border-radius: 999px;
+
+    background:
+        linear-gradient(
+            90deg,
+            #6366f1,
+            #a855f7
+        );
+
+    transition:
+        width 0.7s ease;
+}
+
+
+/* ==========================================
+   PORCENTAGEM
+========================================== */
+
+.porcentagem {
+    text-align: right;
+
+    color: #64748b;
+
+    font-size: 10px;
+
+    margin-bottom: 15px;
+}
+
+
+/* ==========================================
+   SITUAÇÃO
+========================================== */
+
+.situacao {
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    padding: 12px;
+
+    border-radius: 10px;
+}
+
+.situacao > span {
+    width: 26px;
+
+    height: 26px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 50%;
+
+    font-weight: 800;
+}
+
+.situacao strong {
+    font-size: 13px;
+}
+
+.situacao small {
+    color: #94a3b8;
+
+    font-size: 11px;
+}
+
+.situacao-aprovado {
+    background:
+        rgba(34, 197, 94, 0.08);
+
+    border: 1px solid
+        rgba(34, 197, 94, 0.12);
+}
+
+.situacao-aprovado > span {
+    background:
+        rgba(34, 197, 94, 0.15);
+
+    color: #4ade80;
+}
+
+.situacao-aprovado strong {
+    color: #4ade80;
+}
+
+.situacao-pendente {
+    background:
+        rgba(245, 158, 11, 0.07);
+
+    border: 1px solid
+        rgba(245, 158, 11, 0.1);
+}
+
+.situacao-pendente > span {
+    background:
+        rgba(245, 158, 11, 0.12);
+
+    color: #fbbf24;
+}
+
+.situacao-pendente strong {
+    color: #fbbf24;
+}
+
+
+/* ==========================================
+   RESPONSIVO - CELULAR
+========================================== */
+
+@media (max-width: 600px) {
+
+    body {
+        padding: 20px 10px;
+    }
+
+
+    header h1 {
+        font-size: 26px;
+    }
+
+
+    .card {
+        padding: 16px;
+
+        border-radius: 15px;
+    }
+
+
+    .notas {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+
+    .notas-resultado {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+
+    .materia-lista {
+        align-items: flex-start;
+
+        flex-direction: column;
+    }
+
+
+    .materia-lista-botoes {
+        width: 100%;
+    }
+
+
+    .materia-lista-botoes button {
+        flex: 1;
+    }
+
+
+    .materia-cabecalho {
+        align-items: flex-start;
+
+        flex-direction: column;
+    }
+
+}
+
+
+/* ==========================================
+   CELULAR PEQUENO
+========================================== */
+
+@media (max-width: 380px) {
+
+    header h1 {
+        font-size: 23px;
+    }
+
+
+    .nota-card strong {
+        font-size: 15px;
+    }
+
+
+    .media-card strong {
+        font-size: 18px;
+    }
+
+}
+
+/* ==========================================
+   PAINEL GERAL
+========================================== */
+
+.painel-geral {
+    display: none;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(30, 27, 75, 0.9),
+            rgba(15, 23, 42, 0.95)
+        );
+
+    border: 1px solid
+        rgba(129, 140, 248, 0.2);
+
+    border-radius: 18px;
+
+    padding: 22px;
+
+    margin-bottom: 20px;
+
+    box-shadow:
+        0 15px 40px
+        rgba(0, 0, 0, 0.25);
+
+    animation:
+        aparecer 0.4s ease;
+}
+
+
+/* ==========================================
+   TÍTULO DO PAINEL
+========================================== */
+
+.painel-titulo {
+    margin-bottom: 18px;
+}
+
+.painel-titulo > div {
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+}
+
+.painel-icone {
+    width: 42px;
+
+    height: 42px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 12px;
+
+    background:
+        rgba(99, 102, 241, 0.15);
+
+    border: 1px solid
+        rgba(129, 140, 248, 0.15);
+
+    font-size: 20px;
+}
+
+.painel-titulo h2 {
+    margin: 0;
+
+    font-size: 18px;
+
+    color: #f8fafc;
+}
+
+.painel-titulo p {
+    margin-top: 3px;
+
+    color: #64748b;
+
+    font-size: 11px;
+}
+
+
+/* ==========================================
+   CARDS DO PAINEL
+========================================== */
+
+.painel-cards {
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 10px;
+
+    margin-bottom: 18px;
+}
+
+.painel-card {
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    background:
+        rgba(15, 23, 42, 0.7);
+
+    border: 1px solid
+        rgba(148, 163, 184, 0.08);
+
+    border-radius: 12px;
+
+    padding: 13px;
+
+    transition:
+        transform 0.2s,
+        border-color 0.2s;
+}
+
+.painel-card:hover {
+    transform: translateY(-2px);
+
+    border-color:
+        rgba(129, 140, 248, 0.25);
+}
+
+
+/* ==========================================
+   ÍCONE DOS CARDS
+========================================== */
+
+.painel-card-icone {
+    width: 34px;
+
+    height: 34px;
+
+    flex-shrink: 0;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 9px;
+
+    background:
+        rgba(99, 102, 241, 0.12);
+
+    color: #a5b4fc;
+
+    font-size: 15px;
+
+    font-weight: 800;
+}
+
+
+/* ==========================================
+   TEXTO DOS CARDS
+========================================== */
+
+.painel-card div {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 3px;
+
+    min-width: 0;
+}
+
+.painel-card div span {
+    color: #64748b;
+
+    font-size: 8px;
+
+    font-weight: 800;
+
+    letter-spacing: 0.4px;
+}
+
+.painel-card div strong {
+    color: #f8fafc;
+
+    font-size: 17px;
+
+    white-space: nowrap;
+}
+
+
+/* ==========================================
+   APROVADAS
+========================================== */
+
+.aprovado-card {
+    border-color:
+        rgba(34, 197, 94, 0.1);
+}
+
+.aprovado-card .painel-card-icone {
+    background:
+        rgba(34, 197, 94, 0.1);
+
+    color: #4ade80;
+}
+
+
+/* ==========================================
+   EM ANDAMENTO
+========================================== */
+
+.andamento-card {
+    border-color:
+        rgba(245, 158, 11, 0.1);
+}
+
+.andamento-card .painel-card-icone {
+    background:
+        rgba(245, 158, 11, 0.1);
+
+    color: #fbbf24;
+}
+
+
+/* ==========================================
+   PONTOS
+========================================== */
+
+.pontos-card {
+    border-color:
+        rgba(168, 85, 247, 0.12);
+}
+
+.pontos-card .painel-card-icone {
+    background:
+        rgba(168, 85, 247, 0.12);
+
+    color: #c084fc;
+}
+
+
+/* ==========================================
+   PROGRESSO GERAL
+========================================== */
+
+.painel-progresso {
+    background:
+        rgba(15, 23, 42, 0.55);
+
+    border: 1px solid
+        rgba(148, 163, 184, 0.08);
+
+    border-radius: 12px;
+
+    padding: 13px;
+}
+
+.painel-progresso-topo {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    margin-bottom: 8px;
+}
+
+.painel-progresso-topo span {
+    color: #94a3b8;
+
+    font-size: 11px;
+
+    font-weight: 700;
+}
+
+.painel-progresso-topo strong {
+    color: #a5b4fc;
+
+    font-size: 12px;
+}
+
+
+/* ==========================================
+   BARRA DO PAINEL
+========================================== */
+
+.painel-progresso-container {
+    width: 100%;
+
+    height: 8px;
+
+    background: #1e293b;
+
+    border-radius: 999px;
+
+    overflow: hidden;
+}
+
+.painel-progresso-barra {
+    height: 100%;
+
+    border-radius: 999px;
+
+    background:
+        linear-gradient(
+            90deg,
+            #6366f1,
+            #a855f7,
+            #c084fc
+        );
+
+    transition:
+        width 0.8s ease;
+}
+
+
+/* ==========================================
+   CELULAR
+========================================== */
+
+@media (max-width: 700px) {
+
+    .painel-cards {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+}
+
+
+@media (max-width: 420px) {
+
+    .painel-geral {
+        padding: 16px;
+    }
+
+    .painel-cards {
+        grid-template-columns:
+            1fr;
+    }
+
+    .painel-card {
+        padding: 12px;
+    }
+
+}
+
+/* ==========================================
+   NOVO CABEÇALHO
+========================================== */
+
+.topo {
+    display: flex;
+
+    align-items: center;
+
+    gap: 14px;
+
+    margin-bottom: 30px;
+
+    padding: 18px;
+
+    background:
+        rgba(15, 23, 42, 0.65);
+
+    border: 1px solid
+        rgba(148, 163, 184, 0.1);
+
+    border-radius: 18px;
+
+    box-shadow:
+        0 12px 35px
+        rgba(0, 0, 0, 0.18);
+}
+
+
+/* ÍCONE */
+
+.topo-icone {
+    width: 52px;
+
+    height: 52px;
+
+    flex-shrink: 0;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 14px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #6366f1,
+            #a855f7
+        );
+
+    font-size: 25px;
+
+    box-shadow:
+        0 8px 20px
+        rgba(99, 102, 241, 0.25);
+}
+
+
+/* TEXTO */
+
+.topo-texto {
+    flex: 1;
+}
+
+.topo-texto h1 {
+    margin: 0;
+
+    font-size: 24px;
+
+    font-weight: 800;
+
+    letter-spacing: -0.5px;
+
+    background:
+        linear-gradient(
+            90deg,
+            #818cf8,
+            #c084fc
+        );
+
+    -webkit-background-clip: text;
+
+    -webkit-text-fill-color: transparent;
+}
+
+.topo-texto p {
+    margin-top: 4px;
+
+    color: #64748b;
+
+    font-size: 12px;
+}
+
+
+/* META */
+
+.meta {
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: flex-end;
+
+    gap: 3px;
+
+    padding-left: 15px;
+
+    border-left: 1px solid
+        rgba(148, 163, 184, 0.12);
+}
+
+.meta span {
+    color: #64748b;
+
+    font-size: 9px;
+
+    font-weight: 800;
+
+    letter-spacing: 1px;
+}
+
+.meta strong {
+    color: #4ade80;
+
+    font-size: 13px;
+
+    white-space: nowrap;
+}
+
+
+/* CELULAR */
+
+@media (max-width: 550px) {
+
+    .topo {
+        padding: 14px;
+
+        gap: 10px;
+    }
+
+    .topo-icone {
+        width: 44px;
+
+        height: 44px;
+
+        font-size: 21px;
+
+        border-radius: 12px;
+    }
+
+    .topo-texto h1 {
+        font-size: 19px;
+    }
+
+    .topo-texto p {
+        font-size: 10px;
+    }
+
+    .meta {
+        padding-left: 10px;
+    }
+
+    .meta strong {
+        font-size: 11px;
+    }
+
+}

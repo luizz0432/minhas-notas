@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>Minhas Notas</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+
+<body>
+
+    <div class="container">
+
+
+        <!-- ==========================================
+             CABEÇALHO
+        =========================================== -->
+
+        <header class="topo">
+
+    <div class="topo-icone">
+        🎓
+    </div>
+
+    <div class="topo-texto">
+
+    <h1>
+        MINHAS NOTAS
+    </h1>
+
+    <p id="saudacao">
+        Acompanhe seu desempenho escolar
+    </p>
+
+</div>
+
+
+    <div class="meta">
+
+        <span>
+            META
+        </span>
+
+        <strong>
+            24 PONTOS
+        </strong>
+
+    </div>
+
+</header>
+
+
+
+        <!-- ==========================================
+             CADASTRO
+        =========================================== -->
+
+        <div class="card formulario">
+
+            <h2>
+                📝 Adicionar matéria
+            </h2>
+
+
+            <!-- NOME -->
+
+            <label for="nome">
+                Nome do aluno
+            </label>
+
+            <input
+                type="text"
+                id="nome"
+                placeholder="Digite seu nome"
+            >
+
+
+            <!-- MATÉRIA -->
+
+            <label for="materia">
+                Matéria
+            </label>
+
+            <input
+                type="text"
+                id="materia"
+                placeholder="Ex: Matemática"
+            >
+
+
+            <!-- ==========================================
+                 NOTAS
+            =========================================== -->
+
+            <div class="notas">
+
+
+                <!-- 1º BIMESTRE -->
+
+                <div>
+
+                    <label for="nota1">
+                        1º Bimestre
+                    </label>
+
+                    <input
+                        type="number"
+                        id="nota1"
+                        placeholder="Nota"
+                        min="0"
+                        step="0.01"
+                    >
+
+                </div>
+
+
+                <!-- 2º BIMESTRE -->
+
+                <div>
+
+                    <label for="nota2">
+                        2º Bimestre
+                    </label>
+
+                    <input
+                        type="number"
+                        id="nota2"
+                        placeholder="Nota"
+                        min="0"
+                        step="0.01"
+                    >
+
+                </div>
+
+
+                <!-- 3º BIMESTRE -->
+
+                <div>
+
+                    <label for="nota3">
+                        3º Bimestre
+                    </label>
+
+                    <input
+                        type="number"
+                        id="nota3"
+                        placeholder="Nota"
+                        min="0"
+                        step="0.01"
+                    >
+
+                </div>
+
+
+                <!-- 4º BIMESTRE -->
+
+                <div>
+
+                    <label for="nota4">
+                        4º Bimestre
+                    </label>
+
+                    <input
+                        type="number"
+                        id="nota4"
+                        placeholder="Nota"
+                        min="0"
+                        step="0.01"
+                    >
+
+                </div>
+
+            </div>
+
+
+            <!-- BOTÃO -->
+
+            <button id="adicionar">
+
+                + ADICIONAR MATÉRIA
+
+            </button>
+
+        </div>
+
+
+        <!-- ==========================================
+             MATÉRIAS
+        =========================================== -->
+
+        <div class="card">
+
+            <h2>
+                📚 Matérias cadastradas
+            </h2>
+
+            <div id="lista-materias">
+
+                Nenhuma matéria cadastrada.
+
+            </div>
+
+        </div>
+
+
+        <!-- ==========================================
+             BOTÕES PRINCIPAIS
+        =========================================== -->
+
+        <div class="card">
+
+            <button id="calcular">
+
+                📊 CALCULAR RESULTADO
+
+            </button>
+
+
+            <button id="limpar">
+
+                🗑️ LIMPAR TUDO
+
+            </button>
+
+        </div>
+
+
+        <!-- ==========================================
+             PAINEL GERAL
+        =========================================== -->
+
+        <div
+            id="painel-geral"
+            class="painel-geral"
+        >
+
+            <!-- Será preenchido pelo JavaScript -->
+
+        </div>
+
+
+        <!-- ==========================================
+             RESULTADO
+        =========================================== -->
+
+        <div id="resultado"></div>
+
+
+    </div>
+
+
+    <!-- ==========================================
+         JAVASCRIPT
+    =========================================== -->
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
